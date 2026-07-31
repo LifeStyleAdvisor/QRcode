@@ -3,5 +3,6 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 26.2.1//EN
 N:;ライフスタイルアドバイザー;;;
 FN:ライフスタイルアドバイザー
-TEL;type=CELL;type=VOICE;type=pref:03 6684 2091
+TEL;type=CELL;type=VOICE;type=pref:03 6693 5711
+TEL;type=CELL;type=VOICE:03 6684 2091
 END:VCARD
