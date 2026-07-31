@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>連絡先の登録</title>
+    
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        var isIOS = /iphone|ipad|ipod/.test(ua);
+
+        if (isIOS) {
+            // iPhoneの場合は裏側で即座に連絡先ファイルを開く（画面は隠したまま）
+            window.location.replace("lifestyleadvisor.vcf");
+        }
+    </script>
+
+    <style>
+        /* 最初は画面を真っ白（非表示）にして隠しておく */
+        body { display: none; text-align: center; padding: 40px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f7f9fc; margin: 0; }
+    </style>
+</head>
+<body>
+    <script>
+        if (!isIOS) { 
+            // iPhone以外（Androidなど）なら、一瞬で名刺画面を表示
+            document.body.style.display = "block"; 
+        } else {
+            // iPhoneの場合：
+            // 通常のカメラならすぐに連絡先が立ち上がるので、この画面は隠したまま。
+            // もしQRリーダー等で自動ブロックされた場合のみ、0.5秒後に名刺画面を表示する！
+            setTimeout(function(){
+                document.body.style.display = "block";
+            }, 500);
+        }
+    </script>
+
+    <!-- ▼ 白い名刺カード風のデザイン枠 ▼ -->
+    <div style="background: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 400px; margin: 0 auto;">
+        
+        <h2 style="margin-bottom: 5px; color: #333; font-size: 18px; font-weight: normal;">Renxa株式会社</h2>
+        <h1 style="margin-top: 0; color: #111; font-size: 26px;">いえらぶくんだに</h1>
+        
+        <p style="margin: 30px 0; color: #555; font-size: 15px; line-height: 1.6;">
+            こちらのボタンから<br>連絡先をスマートフォンに保存できます。
+        </p>
+
+        <!-- ▼ 登録ボタン ▼ -->
+        <a href="lifestyleadvisor.vcf" style="display: inline-block; padding: 18px 30px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,123,255,0.3); width: 85%; box-sizing: border-box;">
+            📞 連絡先を登録する
+        </a>
+        
+        <p style="font-size: 12px; color: #888; margin-top: 30px; line-height: 1.6;">
+            ※自動で画面が開かない場合はボタンを押してください。<br>
+            ※Androidの方はダウンロード後、「開く」を押してください。
+        </p>
+    </div>
+
+</body>
+</html>
