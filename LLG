@@ -3,8 +3,10 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 26.2.1//EN
 N:;ライフスタイルアドバイザー;;;
 FN:ライフスタイルアドバイザー
-TEL;type=WORK;type=VOICE;type=pref:03-6684-2091
-TEL;type=WORK;type=VOICE:03-6693-5711
-item1.TEL;type=WORK;type=VOICE:03-6897-5557
-item1.X-ABLabel:グローバル窓口
+item1.TEL;type=WORK;type=VOICE;type=pref:03-6684-2091
+item1.X-ABLabel:電気/ウォーターサーバー
+item2.TEL;type=WORK;type=VOICE:03-6693-5711
+item2.X-ABLabel:インターネット
+item3.TEL;type=WORK;type=VOICE:03-6897-5557
+item3.X-ABLabel:グローバル窓口
 END:VCARD
